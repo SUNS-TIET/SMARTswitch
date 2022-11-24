@@ -1,3 +1,2 @@
 # SMARTswitch
-Temporary name - changed to PUNJAB - 
-different repos for backend or same?
+PUNJAB PROJECT - PAANI UTNA NIKALO JITNA AI BOLE
