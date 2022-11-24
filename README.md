@@ -1,3 +1,3 @@
 # SMARTswitch
-Temporary name - to be changed before submitting
+Temporary name - changed to PUNJAB - 
 different repos for backend or same?
