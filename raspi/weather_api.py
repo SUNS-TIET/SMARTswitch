@@ -11,4 +11,6 @@ def get_weather_data(lat, lon, start):
 	r = requests.get(url)
 	return r.json()
 
-print (get_weather_data(30.3398, 76.3869, appid)) #patiala longitude and latitude
+weather_patiala = (get_weather_data(30.3398, 76.3869, appid)) #patiala longitude and latitude
+weather_chandigarh = (get_weather_data(30.7333, 76.7794, appid))
+weather_amritsar = (get_weather_data(31.6340, 74.8723, appid))
