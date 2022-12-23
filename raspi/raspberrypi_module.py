@@ -40,7 +40,7 @@ while True:
 		flow = (count / 7.5) # Pulse frequency (Hz) =7.5Q, Q is flow rate in L/min.
 		print("The flow is: %.3f Liter/min" % (flow))
 		print("Sending API Requests...")
-		#os.system ("'curl -X PUT -d '{"time": current_time ,"flow": flow}' 'https://hackathon-42f90-default-rtdb.firebaseio.com/data.json'")
+		#os.system ("'curl -X PUT -d '{"time": current_time ,"flow": flow}' 'INSERT API LINK HERE'")
 
 		#publish.single("/Garden.Pi/WaterFlow", flow, hostname=MQTT_SERVER)
 		
@@ -51,19 +51,19 @@ while True:
 
 		data = {"date": current_date ,"water_l":"270 m","moisture":"20 %","pump":"ON","time": current_time ,"flow": flow, "weather": wa.weather_patiala, "temp": wa.weather_patiala["main"]["temp"], "humidity": wa.weather_patiala["main"]["humidity"]}
 		data_json = json.dumps(data)
-		response = requests.put('https://punjab-2022-default-rtdb.firebaseio.com/data_amritsar.json', headers=headers, data=data_json)
+		response = requests.put('INSERT API LINK HERE', headers=headers, data=data_json)
 		print("Request Sent to Patiala Firebase API")
 
 		data_chd = {"date": current_date ,"time": current_time ,"flow": flow, "weather": wa.weather_chandigarh, "temp": wa.weather_chandigarh["main"]["temp"], "humidity": wa.weather_chandigarh["main"]["humidity"]}
 		data_json_chd = json.dumps(data_chd)
-		response = requests.put('https://punjab-2022-default-rtdb.firebaseio.com/data.json', headers=headers, data=data_json_chd)
+		response = requests.put('INSERT API LINK HERE', headers=headers, data=data_json_chd)
 		print("Request Sent to Chandigarh Firebase API")
 
 
 
 		data_amritsar = {"date": current_date ,"time": current_time ,"flow": flow, "weather": wa.weather_amritsar, "temp": wa.weather_amritsar["main"]["temp"], "humidity": wa.weather_amritsar["main"]["humidity"]}
 		data_json_amritsar = json.dumps(data_amritsar)
-		response = requests.put('https://punjab-2022-default-rtdb.firebaseio.com/data_chd.json', headers=headers, data=data_json_amritsar)
+		response = requests.put('INSERT API LINK HERE', headers=headers, data=data_json_amritsar)
 		print("Request Sent to Amritsar Firebase API")
 
 
@@ -71,7 +71,7 @@ while True:
 
 
 
-		# response = requests.put('https://hackathon-42f90-default-rtdb.firebaseio.com/data.json', headers=headers, data=data_json) old url
+		# response = requests.put('INSERT API LINK HERE', headers=headers, data=data_json) old url
 
 		count = 0
 		time.sleep(60)
